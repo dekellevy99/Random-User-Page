@@ -26,7 +26,7 @@ class Pokemon{
     }
 
     // === Static Methods ===
-    static async generatePokemon(){
+    static async generatePokemon(): Promise<Pokemon>{
         const MAX_POKEMON_COUNT = 949;
         const MIN_POKEMON_COUNT = 1;
         const randomId = Math.floor(Math.random() * (MAX_POKEMON_COUNT - MIN_POKEMON_COUNT + 1) + MIN_POKEMON_COUNT)
@@ -34,5 +34,7 @@ class Pokemon{
         
         const name = pokemon.name;
         const imgUrl = pokemon.sprites.other.dream_world.front_default;
+
+        return new Pokemon(name, imgUrl);
     }
 }

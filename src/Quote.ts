@@ -26,8 +26,9 @@ class Quote{
     }
 
     // === Static Methods ===
-    static async generateQuote(){
+    static async generateQuote(): Promise<Quote>{
         const quoteObj = await $.get("https://api.kanye.rest");
         const text = quoteObj.quote;
+        return new Quote(text, "Kanye West");
     }
 }
