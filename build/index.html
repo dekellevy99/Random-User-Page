@@ -5,31 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>RUPG</title>
 </head>
 <body>
     
 
     <div id="container">
         <div id="header">
-
+            <script id="person-template" type="text/x-handlebars-template">
+                <div class="user">
+                    <img src={{urlImg}}>
+                    <h2> {{firstName}} {{lastName}} </h2>
+                    <h4> {{city}}, {{state}} </h4>
+                </div>
+            </script>
         </div>
 
         <div id="content-container">
             <div id="content">
+                <div id="quote-section">
+                    <script id="quote-template" type="text/x-handlebars-template">
+                        <h3 class="quote-title">Favorite Quote</h3>
+                        <h3 class="quote-text"> {{text}} - {{author}} </h3>
+                    </script>
+                </div>
 
+                <div id="pokemon-section">
+                    <script id="pokemon-template" type="text/x-handlebars-template">
+                        <div class="pokemon">
+                            <img src={{imgUrl}}>
+                            <h3> Favorite Pokemon - {{name}} </h3>
+                        </div>
+                    </script>
+                </div>
+
+                <div id="aboutMe-section">
+                    <script id="aboutMe-template" type="text/x-handlebars-template">
+                        <div class="aboutMe">
+                            <h3 class="aboutMe-title">About Me</h3>
+                            <h5 class="aboutMe-text"> {{paragraph}} </h5>
+                        </div>
+                    </script>
+                </div>
             </div>
 
-            <div id="friends-list">
-
+            <div id="friends-container">
+                <script id="friends-template" type="text/x-handlebars-template">
+                    <h4 class="list-title">Friends</h4>
+                    <ul>
+                        {{#each friends}}
+                            <li class="friends">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </script>
             </div>    
         </div>
 
         <div id="footbar">
-
-        </div>
     </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./Person.js"></script>
+    <script src="./Quote.js"></script>
+    <script src="./Pokemon.js"></script>
+    <script src="./About.js"></script>
+    <script src="./Data.js"></script>
+    <script src="./Render.js"></script>
 </body>
 </html>
