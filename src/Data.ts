@@ -45,11 +45,18 @@ class Data{
         this._aboutMe = aboutMe;
     }
 
+    setData(data: any){
+        Object.assign(this._user, data._user);
+        Object.assign(this._quote, data._quote);
+        Object.assign(this._pokemon, data._pokemon);
+        Object.assign(this._aboutMe, data._aboutMe);
+    }
+
     async generate(){
         this.user = await Person.generateUser();
         this.quote = await Quote.generateQuote();
         this.pokemon = await Pokemon.generatePokemon();
         this.aboutMe = await About.generateAbout();
     }
-    
 }
+
