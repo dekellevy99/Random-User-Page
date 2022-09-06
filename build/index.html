@@ -12,57 +12,72 @@
 
     <div id="container">
         <div id="header">
-            <script id="person-template" type="text/x-handlebars-template">
-                <div class="user">
-                    <img src={{urlImg}}>
-                    <h2> {{firstName}} {{lastName}} </h2>
-                    <h4> {{city}}, {{state}} </h4>
-                </div>
-            </script>
+
         </div>
 
         <div id="content-container">
             <div id="content">
                 <div id="quote-section">
-                    <script id="quote-template" type="text/x-handlebars-template">
-                        <h3 class="quote-title">Favorite Quote</h3>
-                        <h3 class="quote-text"> {{text}} - {{author}} </h3>
-                    </script>
+
                 </div>
 
                 <div id="pokemon-section">
-                    <script id="pokemon-template" type="text/x-handlebars-template">
-                        <div class="pokemon">
-                            <img src={{imgUrl}}>
-                            <h3> Favorite Pokemon - {{name}} </h3>
-                        </div>
-                    </script>
+
                 </div>
 
                 <div id="aboutMe-section">
-                    <script id="aboutMe-template" type="text/x-handlebars-template">
-                        <div class="aboutMe">
-                            <h3 class="aboutMe-title">About Me</h3>
-                            <h5 class="aboutMe-text"> {{paragraph}} </h5>
-                        </div>
-                    </script>
+
                 </div>
             </div>
 
             <div id="friends-container">
-                <script id="friends-template" type="text/x-handlebars-template">
-                    <h4 class="list-title">Friends</h4>
-                    <ul>
-                        {{#each friends}}
-                            <li class="friends">{{this}}</li>
-                        {{/each}}
-                    </ul>
-                </script>
+
             </div>    
         </div>
 
         <div id="footbar">
+            <button id="gen-btn">Generator</button>
+            <button id="load-btn">Load User</button>
+            <button id="save-btn">Save User</button>
+        </div>
     </div>
+
+    <!-- ================================== TEMPLATES SCRIPTS ================================== -->
+    <script id="person-template" type="text/x-handlebars-template">
+        <div class="user">
+            <img src={{urlImg}}>
+            <h2 class="user-name"> {{firstName}} {{lastName}} </h2>
+            <h4 class="user-location"> {{city}}, {{state}} </h4>
+        </div>
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+        <h3 class="quote-title">Favorite Quote</h3>
+        <h4 class="quote-text"> {{text}} - {{author}} </h4>
+    </script>
+
+    <script id="pokemon-template" type="text/x-handlebars-template">
+        <div class="pokemon">
+            <img src={{imgUrl}}>
+            <h4 class="pokemon-title"> Favorite Pokemon - {{name}} </h4>
+        </div>
+    </script>
+
+    <script id="aboutMe-template" type="text/x-handlebars-template">
+        <div class="aboutMe">
+            <h3 class="aboutMe-title">About Me</h3>
+            <h5 class="aboutMe-text"> {{paragraph}} </h5>
+        </div>
+    </script>
+
+    <script id="friends-template" type="text/x-handlebars-template">
+        <h4 class="list-title">Friends</h4>
+        <ul>
+            {{#each friends}}
+                <li class="friends">{{this}}</li>
+            {{/each}}
+        </ul>
+    </script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
@@ -73,5 +88,6 @@
     <script src="./About.js"></script>
     <script src="./Data.js"></script>
     <script src="./Render.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
