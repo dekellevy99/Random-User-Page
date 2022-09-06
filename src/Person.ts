@@ -93,26 +93,3 @@ class Person{
         return new Person(firstName, lastName, city, state, friends, urlImg);
     }
 }
-
-
-// =========  generate user using promise notation ===========
-// private static _generateUserHelper(){
-//     console.log("hii i am here")
-//     return new Promise((resolve, reject) => {
-//         $.get("https://randomuser.me/api/?format=JSON&results=7")
-//             .then(response => {
-//                 const mainUser = response.results[0];
-//                 const firstName = mainUser.name.first;
-//                 const lastName = mainUser.name.last;
-//                 const city = mainUser.location.city;
-//                 const state = mainUser.location.state;
-//                 const urlImg = mainUser.picture.medium;
-
-//                 const friends = response.results.splice(1).
-//                                     map((user: any) => {return `${user.name.first} ${user.name.last}`});
-                
-//                 resolve(new Person(firstName, lastName, city, state, friends, urlImg));
-//             })
-//             .catch(err => reject(err));
-//     });
-// }
