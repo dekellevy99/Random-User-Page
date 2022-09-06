@@ -27,13 +27,13 @@ class Pokemon{
 
     // === Static Methods ===
     static async generatePokemon(): Promise<Pokemon>{
-        const MAX_POKEMON_COUNT = 949;
+        const MAX_POKEMON_COUNT = 905;
         const MIN_POKEMON_COUNT = 1;
         const randomId = Math.floor(Math.random() * (MAX_POKEMON_COUNT - MIN_POKEMON_COUNT + 1) + MIN_POKEMON_COUNT)
         const pokemon = await $.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
         
-        const name = pokemon.name;
-        const imgUrl = pokemon.sprites.other.dream_world.front_default;
+        const name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.substring(1);
+        const imgUrl = pokemon.sprites.front_default;
 
         return new Pokemon(name, imgUrl);
     }
