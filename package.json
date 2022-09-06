@@ -1,0 +1,25 @@
+{
+  "name": "random-user-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dekellevy99/Random-User-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dekellevy99/Random-User-Page/issues"
+  },
+  "homepage": "https://github.com/dekellevy99/Random-User-Page#readme",
+  "dependencies": {
+    "jquery": "^3.6.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.14"
+  }
+}
