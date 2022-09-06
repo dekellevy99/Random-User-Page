@@ -21,7 +21,11 @@
     margin-right: 10px;
 }
 
-.user > h2, h4{
+.user .user-name{
+    color: white;
+}
+
+.user .user-location{
     color: white;
 }
 
@@ -63,7 +67,6 @@
 #pokemon-section{
     display: grid;
     align-items: center;
-    
 }
 
 .pokemon > img{
@@ -71,6 +74,10 @@
     margin-right: 10px;
     width: 50px;
     height: 50px;
+}
+
+.pokemon-title{
+    color: #2c3e50;
 }
 
 #aboutMe-section{
@@ -85,6 +92,7 @@
 
 .aboutMe-text{
     color: #2c3e50;
+    line-height: 20px;
 }
 
 #friends-container{
@@ -108,5 +116,23 @@
 #footbar{
     grid-area: f;
     background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
+#footbar > button{
+    margin: 10px;
+    background-color: #226592;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #bdc3c7;
+}
+
+#footbar > button:hover{
+    margin: 10px;
+    background-color: #3b86b8;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px white;
+    color: white
+}
