@@ -129,7 +129,7 @@
     color: #bdc3c7;
 }
 
-#footbar > button:hover{
+#footbar > button:hover, #load-btn:hover{
     margin: 10px;
     background-color: #3b86b8;
     cursor: pointer;
