@@ -15,5 +15,5 @@ and to load them later.
 
 <H1> Screenshots </H1>
 
-![Screenshot](screenshot1.png)
-![Screenshot](screenshot2.png)
+![Screenshot](Screenshot1.png)
+![Screenshot](Screenshot2.png)
