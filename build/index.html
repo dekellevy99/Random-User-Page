@@ -37,8 +37,14 @@
 
         <div id="footbar">
             <button id="gen-btn">Generator</button>
-            <button id="load-btn">Load User</button>
             <button id="save-btn">Save User</button>
+            <div class="dropup">
+                <button id="load-btn">Load User</button>
+                <div id="dropup-content">
+
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -79,6 +85,12 @@
         </ul>
     </script>
 
+    <script id="saved-users-template" type="text/x-handlebars-template">
+        {{#each savedUsers}}
+            <p class="saved-users" data-id={{id}}>{{name}}</p>
+        {{/each}}
+    </script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -88,6 +100,7 @@
     <script src="./About.js"></script>
     <script src="./Data.js"></script>
     <script src="./Render.js"></script>
+    <script src="./LocalStorageManager.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
