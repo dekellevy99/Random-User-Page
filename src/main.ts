@@ -1,6 +1,7 @@
 (function(){
     const data: Data = new Data();
     const render: Render = new Render();
+    const localStorageManager = new LocalStorageManager();
     data.generate().then(() => render.render(data));
     
     $("#gen-btn").on("click", function(){
@@ -8,12 +9,16 @@
     })
 
     $("#save-btn").on("click", function(){
-        localStorage["saved-user"] = JSON.stringify(data);
+        localStorageManager.addData(data);
     })
 
-    $("#load-btn").on("click", function(){
-        const loadUser = JSON.parse(localStorage["saved-user"]);
-        data.setData(loadUser);
+    $("#load-btn").hover(function(){
+        render.renderSavedUsers(localStorageManager.getSavedUsers());
+    })
+
+    $("#dropup-content").on("click", ".saved-users", function(){
+        const user = localStorageManager.getDataById($(this).data().id);
+        data.setData(user);
         render.render(data);
     })
 })()

@@ -11,6 +11,13 @@ class Render{
         this._renderAboutMe(data.aboutMe);
     }
 
+    renderSavedUsers(users: any): void{
+        $("#dropup-content").empty();
+        let source = $("#saved-users-template").html();
+        let template = Handlebars.compile(source);
+        $("#dropup-content").append(template({savedUsers: users}));
+    }
+
     // === Private Helper Methods ===
 
     private _clean(){
