@@ -18,9 +18,16 @@ class LocalStorageManager{
         localStorage["saved-users"] = JSON.stringify(users);
     }
 
-    getData(id: number){
+    getDataById(id: number){
         const users = JSON.parse(localStorage["saved-users"]);
         const user = users.find((u: any) => {return u.id === id});
         return user.data;
+    }
+    
+    getSavedUsers(){
+        let users = JSON.parse(localStorage["saved-users"]);
+        users = users.map((user:any) => {return {id: user.id, 
+            name: `${user.data._user._firstName} ${user.data._user._lastName}`}});
+        return users;
     }
 }
